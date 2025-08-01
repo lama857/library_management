@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <menuitem id="menu_library_book_action" name="Books" parent="menu_library_root" action="action_library_book" sequence="20"/>
+
+    <record id="action_library_book" model="ir.actions.act_window">
+      <field name="name">Books</field>
+      <field name="res_model">library.book</field>
+      <field name="view_mode">list,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+          Create your first book record
+        </p>
+      </field>
+    </record>
+
+
+    <record id="view_form_library_book" model="ir.ui.view">
+      <field name="name">library.book.form</field>
+      <field name="model">library.book</field>
+      <field name="arch" type="xml">
+        <form string="Book">
+          <sheet>
+            <group>
+              <field name="name" string="Title"/>
+              <field name="author_id" string="Author"/>
+              <field name="isbn" string="ISBN"/>
+              <field name="publish_date" string="Publish Date"/>
+              <field name="availability" string="Availability"/>
+            </group>
+            <group>
+              <field name="description" string="Description" widget="text"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_list_library_book" model="ir.ui.view">
+      <field name="name">library.book.list</field>
+      <field name="model">library.book</field>
+      <field name="arch" type="xml">
+        <list string="Books">
+          <field name="name" string="Title"/>
+          <field name="author_id" string="Author"/>
+          <field name="isbn" string="ISBN"/>
+          <field name="publish_date" string="Publish Date"/>
+          <field name="availability" string="Availability"/>
+        </list>
+      </field>
+    </record>
+
+  </data>
+</odoo>

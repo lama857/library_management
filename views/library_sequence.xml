@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="seq_library_card_id" model="ir.sequence">
+        <field name="name">Library Card ID</field>
+        <field name="code">library.card.id</field>
+        <field name="prefix">CARD</field>
+        <field name="padding">4</field>
+        <field name="implementation">no_gap</field>
+    </record>
+</odoo>

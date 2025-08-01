@@ -1,0 +1,52 @@
+<odoo>
+   
+    <!-- Main menu for Library module -->
+    <menuitem id="menu_library_root" name="Library" sequence="10"/>
+
+    <!-- Duplicate main Library menu (should be removed or fixed) -->
+    <menuitem id="menu_library_root" name="Library" sequence="10"/>
+
+    <!-- Action to open the list and form views of Books -->
+    <record id="action_library_book" model="ir.actions.act_window">
+      <field name="name">Books</field>
+      <field name="res_model">library.book</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Action to open the list and form views of Members filtered by card_id -->
+    <record id="action_library_members_only" model="ir.actions.act_window">
+        <field name="name">Members</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('card_id', '!=', False)]</field>
+    </record>
+
+    <!-- Menu item for Members submenu under Library -->
+    <menuitem id="menu_library_members_only" name="Members" parent="menu_library_root" action="action_library_members_only" sequence="20"/>
+
+    <!-- Action to open Membership Requests views -->
+    <record id="action_library_membership_request" model="ir.actions.act_window">
+        <field name="name">Membership Requests</field>
+        <field name="res_model">library.membership</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu item for Membership Requests submenu under Library -->
+    <menuitem id="menu_membership_requests" name="Membership Requests" parent="menu_library_root" action="action_library_membership_request" sequence="30"/>
+
+    <!-- Menu item for Borrow Records submenu under Library (action assumed defined elsewhere) -->
+    <menuitem id="menu_library_borrow" name="Borrow Records" parent="menu_library_root" action="action_library_borrow" sequence="40"/>
+
+    <!-- Action to open Membership Invoices filtered by membership product -->
+    <record id="action_library_membership_invoices" model="ir.actions.act_window">
+        <field name="name">Membership Invoices</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[
+            ('invoice_line_ids.product_id.name', 'ilike', 'membership')
+        ]</field>
+    </record>
+
+    <!-- Menu item for Membership Invoices submenu under Library -->
+    <menuitem id="menu_library_membership_invoices" name="Membership Invoices" parent="menu_library_root" action="action_library_membership_invoices" sequence="50"/>
+</odoo>

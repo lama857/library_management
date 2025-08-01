@@ -1,0 +1,74 @@
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Library Membership"
+msgstr "عضوية المكتبة"
+
+msgid "Library Memberships"
+msgstr "عضويات المكتبة"
+
+msgid "Card ID"
+msgstr "رقم البطاقة"
+
+msgid "Registration Date"
+msgstr "تاريخ التسجيل"
+
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+msgid "Membership Type"
+msgstr "نوع العضوية"
+
+msgid "Member"
+msgstr "العضو"
+
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+msgid "Payment Terms"
+msgstr "شروط الدفع"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Membership Lines"
+msgstr "تفاصيل العضوية"
+
+msgid "Product"
+msgstr "المنتج"
+
+msgid "Amount"
+msgstr "المبلغ"
+
+msgid "Confirm"
+msgstr "تأكيد"
+
+msgid "Mark as Paid"
+msgstr "تحديد كمُدفوعة"
+
+msgid "Membership Request"
+msgstr "طلب عضوية"
+
+msgid "Membership Requests"
+msgstr "طلبات العضوية"
+
+msgid "Cash"
+msgstr "نقدًا"
+
+msgid "Bank Transfer"
+msgstr "تحويل بنكي"
+
+msgid "PayPal"
+msgstr "باي بال"
+
+msgid "Draft"
+msgstr "مسودة"
+
+msgid "Confirmed"
+msgstr "مؤكد"
+
+msgid "Paid"
+msgstr "مدفوع"
+
+msgid "Active"
+msgstr "نشط"
